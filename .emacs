@@ -44,7 +44,4 @@
   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (add-hook 'prog-mode-hook #'hs-minor-mode)
-(global-set-key (kbd "C-c C-h") (kbd "C-c @ C-h"))         ;;hiding block of code
-(global-set-key (kbd "C-c C-r") (kbd "C-c @ C-s"))         ;;revealing block of code
-(global-set-key (kbd "C-c C-M-h") (kbd "C-c @ C-M-h"))     ;;hide all blocks of code
-(global-set-key (kbd "C-c C-M-s") (kbd "C-c @ C-M-s"))     ;;show all blocks of code
+
