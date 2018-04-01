@@ -1,2 +1,2 @@
 # EMACS
-Contains EMACS configuration file
+Contains my own personal EMACS configuration file
