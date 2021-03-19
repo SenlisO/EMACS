@@ -26,6 +26,8 @@
 ;; myPackages contains a list of package names
 (defvar myPackages
   '(better-defaults                 ;; Set up some better Emacs defaults
+    flycheck                        ;; On the fly syntax checking
+;;    py-autopep8                     ;; Run autopep8 on save
     elpy                            ;; Emacs Lisp Python Environment
     material-theme                  ;; Theme
     )
@@ -65,5 +67,12 @@
 ;; ===================================
 ;; Enable elpy
 (elpy-enable)
+;; Enable Flycheck
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
+;; Enable autopep8
+;;(require 'py-autopep8)
+;;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 ;; User-Defined init.el ends here
